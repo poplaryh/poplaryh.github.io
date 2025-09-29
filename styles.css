@@ -25,6 +25,13 @@ body {
         width: 210mm;    /* 宽度设为A4纸的标准宽度（210毫米） */
         height: 297mm;   /* 高度设为A4纸的标准高度（297毫米） */
         margin: 0;       /* 去除默认边距，避免打印时出现不必要的空白 */
+        font-size: 12pt; /* 设置适合打印的字体大小 */
+        color: black; /* 确保打印时文字为黑色 */
+    }
+
+    a::after {
+        content: " (" attr(href) ")"; /* 在链接后显示URL */
+        font-size: 0.9em; /* 链接URL字体稍小 */
     }
 }
 
