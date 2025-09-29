@@ -41,3 +41,12 @@ body {
         color: #fff;
     }
 }
+@media (max-width: 768px) {
+    .language-tab {
+        display: block;
+        margin: 5px 0;
+    }
+    .bilingual-resume {
+        padding: 15px;
+    }
+}

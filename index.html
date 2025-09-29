@@ -6,145 +6,317 @@
 	<meta name="description" content="杨皓的在线简历｜机器人算法工程师｜2年经验">
     <title>杨皓的简历</title>
 	<link rel="stylesheet" href="styles.css">
+	<div class="language-switcher">
+    <button id="lang-zh" onclick="switchLanguage('zh')">中文</button>
+    <button id="lang-en" onclick="switchLanguage('en')">English</button>
+</div>
 </head>
 <body>
-    <h1>中文简历-杨皓</h1>
-    <p>( 这是我的中文简历，英文简历在后面，请下滑查看，谢谢 )</p>
-	<hr>
+	<div id="chinese-content" data-lang="zh">
+		<h1>简历-杨皓</h1>
+		<hr>
 
-	<section class="profile">
-		<img src="images/pic01.jpg" alt="职业照" width="120" style="float: right;">
+		<section class="profile">
+			<br>
+			<img src="images/pic01.jpg" alt="职业照" width="120" style="float: right;">
+			<h2>📮 联系方式</h2>
+			<ul>
+				<li>📧 邮箱：haoyang1306@qq.com</li>
+				<li>📱 电话：18717963787</li>
+				<li>📍 地址：上海市嘉定区玉麦路388弄</li>
+				<li>💬 微信：yh18717963787</li>
+			</ul>
+			<br>
+
+			<hr>
+		</section>
+
+		<section class="experience" style="clear: both;">
+			<h2>💼 工作/实习经历</h2>
+			<h3>机器人算法工程师 | 中核装备技术研究（上海）有限公司 | 2025.08 - 现在 </h3>
+			<h4>机械狗巡检项目</h4>
+			<ul>
+				<li>负责云深处X30机械狗的导航算法适配调试，实现特定任务点位的自动巡检。</li>
+				<li>使用睿尔曼机械臂，实现机械臂自动追踪功能算法。</li>
+				<li>使用海康的双光相机，实现相机参数自动调整并拍照。</li>
+				<li>项目开发基于ROS系统，编程语言为python。</li>
+			</ul>
+			<p>项目技术栈：ROS, Python, OpenCV</p>
+			<br>
+			<h3>机器人算法工程师 | 中核装备技术研究（上海）有限公司 | 2025.03 - 2025.08 </h3>
+			<h4>机械臂自动分拣项目</h4>
+			<ul>
+				<li>基于睿尔曼机械臂和D435相机，复现Graspnet网络，结合yolo系列的目标识别和分割模型，实现对桌面物体的自动识别和抓取，并放置到指定区域 </li>
+				<li>基于睿尔曼机械臂（及LeRobot机械臂）和D435相机，复现ACT和DP网络，通过模仿学习，实现自动对桌面物体进行抓取放置的功能 </li>
+				<li>基于ROS框架，开发主从臂协作控制算法，使用睿尔曼机械臂进行主从臂控制，进行数据采集</li>
+				<li>项目开发基于ROS系统，编程语言为python。</li>
+			</ul>
+			<p>项目技术栈：ROS, Python, OpenCV, PyTorch</p>
+			<br>
+		</section>
+		<hr>
+		<section class="projects">
+			<h2>🔧 校园项目经历</h2>
+			
+			<!-- 毕业设计项目 -->
+			<div class="project">
+				<div class="project-period">2024.06-2024.12 | 毕业设计 </div>
+				<h3 class="project-title">《纯视觉基于时间与空间特征融合的端到端自动驾驶》</h3>
+				<p>采用摄像机作为单一传感器，融合连续时间点的图像数据与汽车状态数据（坐标/速度/加速度），实现未来轨迹预测与无人驾驶控制。核心工作包括：</p>
+				<ul>
+					<li>设计时空特征融合网络架构，处理多模态传感器数据</li>
+					<li>搭建PyTorch训练框架，优化模型时序处理能力</li>
+					<li>基于OpenDriveLab竞赛数据集完成算法验证</li>
+				</ul>
+				<div class="project-keywords">
+					<span class="keyword">深度学习</span>
+					<span class="keyword">特征融合</span>
+					<span class="keyword">CNN/RNN/Transformer</span>
+					<span class="keyword">Python/PyTorch</span>
+				</div>
+			</div>
+			<br>
+			<!-- 科研项目 -->
+			<div class="project">
+				<div class="project-period">2023.10-2024.04 | 科研项目 | 主导</div>
+				<h3 class="project-title">《基于模仿学习的纯视觉端到端自动驾驶》</h3>
+				<p>基于nuScenes数据集，对比研究ResNet/ViT等视觉模型与LSTM/GRU时序模型在端到端自动驾驶中的表现。主要成果：</p>
+				<ul>
+					<li>实现碰撞率检测算法，性能超越STP-3基准模型</li>
+					<li>构建多模型对比实验框架，优化训练策略</li>
+					<li>完成nuScenes数据集的预处理与增强方案</li>
+				</ul>
+				<div class="project-keywords">
+					<span class="keyword">模仿学习</span>
+					<span class="keyword">目标检测</span>
+					<span class="keyword">PyTorch/TensorFlow</span>
+				</div>
+			</div>
+			<br>
+			<!-- 实习项目 -->
+			<div class="project">
+				<div class="project-period">2023.04-2023.08 | 实习项目 | 主导</div>
+				<h3 class="project-title">《基于城市模拟器的端到端自动驾驶》</h3>
+				<p>在Unity模拟器环境中实现基于视觉的自动驾驶系统，关键技术包括：</p>
+				<ul>
+					<li>搭建YOLOv5目标检测模块，实现实时障碍物识别</li>
+					<li>设计神经网络控制指令矫正算法</li>
+					<li>完成Cityscape数据集的标注与训练</li>
+				</ul>
+				<div class="project-keywords">
+					<span class="keyword">计算机视觉</span>
+					<span class="keyword">强化学习</span>
+					<span class="keyword">Unity3D/ROS</span>
+				</div>
+			</div>
+		</section>
 		<br>
-		<h2>📮 联系方式</h2>
-		<ul>
-			<li>📧 邮箱：haoyang1306@qq.com</li>
-			<li>📱 电话：18717963787</li>
-			<li>📍 地址：上海市嘉定区玉麦路388弄</li>
-			<li>💬 微信：yh18717963787</li>
-		</ul>
+		<hr>
+
+		<section class="education">
+			<h2>🎓 教育经历</h2>
+			<h3>慕尼黑工业大学 | 机器人、认知与人工智能 | 硕士 | 2022.04 - 2024.12 </h3>
+			<ul>
+				<li>主修课程：机器学习、深度学习、计算机视觉、机器人学、路径规划、人工智能、自动驾驶与设计等</li>
+				<li>GPA: 1.9/1.0</li>
+			</ul>
+			<br>
+			<h3>同济大学 | 汽车服务工程 | 本科 | 2017.09 - 2022.04 </h3>
+			<ul>
+				<li>主修课程：汽车工程基础、汽车电子控制、驱动技术、JAVA、机械原理、电工学、自动原理等</li>
+				<li>GPA: 4.0/5.0</li>
+				<li>奖项：国家励志奖学金、校级优秀学生、DAAD奖学金等</li>
+				<li>担任班级班长，校共青团团委志愿者工作部干事</li>
+			</ul>
+			<br>
+			<h3> 纽伦堡应用技术大学 | 汽车服务工程 | 本科 | 2020.09 - 2022.04 </h3>
+			<ul>
+				<li>主修课程：Matlab、汽车动态控制、内燃机技术等</li>
+				<li>交换学习，在德国完成了半年的课程，9个月实习，毕业设计</li>
+			</ul>
+		</section>
+		<br>
+		<hr>
+		<section class="skills">
+			<h2>📜 个人技能</h2>
+			<ul>
+				<li>德语TestDaF证书 | 17/20</li>
+				<li>英语雅思证书 | 6.5 </li>
+				<li>编程与软件：Python、Matlab、R语言、ROS、ROS2、SolidWorks</li>
+			</ul>
+		</section>
 		<br>
 
 		<hr>
-	</section>
+		<section class="hobbies">
+			<h2>🎨 个人爱好</h2>
+			<p>乒乓球、羽毛球、旅游、音乐、电影</p>
+		</section>
+		<br>
+	</div>
 
-	<section class="experience" style="clear: both;">
-		<h2>💼 工作/实习经历</h2>
-		<h3>机器人算法工程师 | 中核装备技术研究（上海）有限公司 | 2025.08 - 现在 </h3>
-		<h4>机械狗巡检项目</h4>
-		<ul>
-			<li>负责云深处X30机械狗的导航算法适配调试，实现特定任务点位的自动巡检。</li>
-			<li>使用睿尔曼机械臂，实现机械臂自动追踪功能算法。</li>
-			<li>使用海康的双光相机，实现相机参数自动调整并拍照。</li>
-			<li>项目开发基于ROS系统，编程语言为python。</li>
-		</ul>
-		<p>项目技术栈：ROS, Python, OpenCV</p>
-		<br>
-		<h3>机器人算法工程师 | 中核装备技术研究（上海）有限公司 | 2025.03 - 2025.08 </h3>
-		<h4>机械臂自动分拣项目</h4>
-		<ul>
-			<li>基于睿尔曼机械臂和D435相机，复现Graspnet网络，结合yolo系列的目标识别和分割模型，实现对桌面物体的自动识别和抓取，并放置到指定区域 </li>
-			<li>基于睿尔曼机械臂（及LeRobot机械臂）和D435相机，复现ACT和DP网络，通过模仿学习，实现自动对桌面物体进行抓取放置的功能 </li>
-			<li>基于ROS框架，开发主从臂协作控制算法，使用睿尔曼机械臂进行主从臂控制，进行数据采集</li>
-			<li>项目开发基于ROS系统，编程语言为python。</li>
-		</ul>
-		<p>项目技术栈：ROS, Python, OpenCV, PyTorch</p>
-		<br>
-	</section>
-	<hr>
-    <section class="projects">
-        <h2>🔧 校园项目经历</h2>
-        
-        <!-- 毕业设计项目 -->
-        <div class="project">
-            <div class="project-period">2024.06-2024.12 | 毕业设计 </div>
-            <h3 class="project-title">《纯视觉基于时间与空间特征融合的端到端自动驾驶》</h3>
-            <p>采用摄像机作为单一传感器，融合连续时间点的图像数据与汽车状态数据（坐标/速度/加速度），实现未来轨迹预测与无人驾驶控制。核心工作包括：</p>
+    <div id="english-content" data-lang="en">
+		<h1>Resume - Hao Yang</h1>
+		<hr>
+        <section class="profile">
+			<br>
+            <img src="images/pic01.jpg" alt="Professional Photo" width="120" style="float: right;">
+            <h2>📮 Contact Information</h2>
             <ul>
-                <li>设计时空特征融合网络架构，处理多模态传感器数据</li>
-                <li>搭建PyTorch训练框架，优化模型时序处理能力</li>
-                <li>基于OpenDriveLab竞赛数据集完成算法验证</li>
+                <li>Email: haoyang1306@qq.com</li>
+                <li>Phone: (+86) 187-1796-3787</li>
+                <li>Address: Yumai Road 388, Jiading District, Shanghai, China</li>
+                <li>WeChat: yh18717963787</li>
             </ul>
-            <div class="project-keywords">
-                <span class="keyword">深度学习</span>
-                <span class="keyword">特征融合</span>
-                <span class="keyword">CNN/RNN/Transformer</span>
-                <span class="keyword">Python/PyTorch</span>
-            </div>
-        </div>
+        </section>
 		<br>
-        <!-- 科研项目 -->
-        <div class="project">
-            <div class="project-period">2023.10-2024.04 | 科研项目 | 主导</div>
-            <h3 class="project-title">《基于模仿学习的纯视觉端到端自动驾驶》</h3>
-            <p>基于nuScenes数据集，对比研究ResNet/ViT等视觉模型与LSTM/GRU时序模型在端到端自动驾驶中的表现。主要成果：</p>
-            <ul>
-                <li>实现碰撞率检测算法，性能超越STP-3基准模型</li>
-                <li>构建多模型对比实验框架，优化训练策略</li>
-                <li>完成nuScenes数据集的预处理与增强方案</li>
-            </ul>
-            <div class="project-keywords">
-                <span class="keyword">模仿学习</span>
-                <span class="keyword">目标检测</span>
-                <span class="keyword">PyTorch/TensorFlow</span>
-            </div>
-        </div>
+		<hr>
+        <section class="experience">
+            <h2>💼 Professional Experience</h2>
+            <h3>Robotics Algorithm Engineer | China National Nuclear Corporation Equipment Technology Research (Shanghai) Co., Ltd. | 03.2025 - Present</h3>
+            <h4>Mechanical Dog Inspection Project</h4>
+			<ul>
+				<li>Adapted navigation algorithms for Yunshen X30 quadruped robots to achieve automated inspection at specific mission points</li>
+				<li>Developed robotic arm tracking algorithms using Realman robotic arms</li>
+				<li>Implemented automatic camera parameter adjustment system with Hikvision dual-spectrum cameras</li>
+				<li>Project developed based on ROS framework using Python programming</li>
+			</ul>
+			<p>Tech Stack: ROS, Python, OpenCV</p>
+			<br>
+			
+			<h3>Robotics Algorithm Engineer | China National Nuclear Corporation Equipment Technology Research (Shanghai) Co., Ltd. | Mar 2025 - Aug 2025</h3>
+			<h4>Mechanical Arm Automatic Sorting Project</h4>
+			<ul>
+				<li>Reproduced GraspNet network with Realman robotic arms and D435 cameras, integrating YOLO object detection models and segmentation models for automated package handling</li>
+				<li>Developed imitation learning-based grasping algorithms using ACT and DP networks for desktop object manipulation</li>
+				<li>Design master-slave robotic arm control system using ROS framework</li>
+				<li>Project developed based on ROS framework with Python implementation</li>
+			</ul>
+			<p>Tech Stack: ROS, Python, OpenCV, PyTorch</p>
+			<br>
+		</section>
+		<hr>
+		<section class="projects">
+			<h2>🔧 Academic Projects</h2>
+			
+			<!-- Capstone Project -->
+			<div class="project">
+				<div class="project-period">Jun 2024 - Dec 2024 | Capstone Project</div>
+				<h3 class="project-title">"End-to-End Autonomous Driving with Pure Vision"</h3>
+				<p>Utilizing cameras as the sole sensor, this project fused continuous time-series image data with vehicle state data (coordinates/speed/acceleration) to achieve trajectory prediction and autonomous control. Key deliverables:</p>
+				<ul>
+					<li>Designed spatio-temporal feature fusion network architecture for multimodal sensor data processing</li>
+					<li>Built PyTorch training framework with optimized temporal processing capabilities</li>
+					<li>Algorithm validation using OpenDriveLab competition dataset</li>
+				</ul>
+				<div class="project-keywords">
+					<span class="keyword">Deep Learning</span>
+					<span class="keyword">Feature Fusion</span>
+					<span class="keyword">CNN/RNN/Transformer</span>
+					<span class="keyword">Python/PyTorch</span>
+				</div>
+			</div>
+			<br>
+			
+			<!-- Research Project -->
+			<div class="project">
+				<div class="project-period">Oct 2023 - Apr 2024 | Research Project | Lead</div>
+				<h3 class="project-title">"Vision-Centric Autonomous Driving"</h3>
+				<p>Comparative study of ResNet/ViT vision models and LSTM/GRU temporal models for end-to-end autonomous driving using nuScenes dataset. Key achievements:</p>
+				<ul>
+					<li>Developed collision detection algorithm outperforming STP-3 baseline model</li>
+					<li>Constructed multi-model comparison framework with optimized training strategies</li>
+					<li>Implemented nuScenes dataset preprocessing and augmentation pipeline</li>
+				</ul>
+				<div class="project-keywords">
+					<span class="keyword">Imitation Learning</span>
+					<span class="keyword">Object Detection</span>
+					<span class="keyword">PyTorch/TensorFlow</span>
+				</div>
+			</div>
+			<br>
+			
+			<!-- Internship Project -->
+			<div class="project">
+				<div class="project-period">Apr 2023 - Aug 2023 | Internship Project | Lead</div>
+				<h3 class="project-title">"Simulation-based Autonomous Driving in Crowded City"</h3>
+				<p>Implemented vision-based autonomous driving system in Unity simulator environment. Key technologies:</p>
+				<ul>
+					<li>Built YOLOv5 object detection module for real-time obstacle recognition</li>
+					<li>Designed neural network-based control command correction algorithm</li>
+					<li>Completed Cityscape dataset annotation and training</li>
+				</ul>
+				<div class="project-keywords">
+					<span class="keyword">datasets collection and process, </span>
+					<span class="keyword">network construction and tuning, </span>
+					<span class="keyword">Python, PyTorch</span>
+				</div>
+			</div>
+		</section>
 		<br>
-        <!-- 实习项目 -->
-        <div class="project">
-            <div class="project-period">2023.04-2023.08 | 实习项目 | 主导</div>
-            <h3 class="project-title">《基于城市模拟器的端到端自动驾驶》</h3>
-            <p>在Unity模拟器环境中实现基于视觉的自动驾驶系统，关键技术包括：</p>
+		<hr>
+        <section class="education">
+            <h2>🎓 Education Background</h2>
+            <h3>TUM | Master | Robotics, Cognition and Intelligence | April 2022 - Dec 2024</h3>
             <ul>
-                <li>搭建YOLOv5目标检测模块，实现实时障碍物识别</li>
-                <li>设计神经网络控制指令矫正算法</li>
-                <li>完成Cityscape数据集的标注与训练</li>
+                <li>Core Courses: Machine Learning, Deep Learning, Computer Vision, Robotics, Motion Planning, AI, Autonomous Driving Design etc.</li>
+                <li>GPA: 1.9/1.0</li>
             </ul>
-            <div class="project-keywords">
-                <span class="keyword">计算机视觉</span>
-                <span class="keyword">强化学习</span>
-                <span class="keyword">Unity3D/ROS</span>
-            </div>
-        </div>
-    </section>
-	<br>
-	<hr>
+            <br>
+            <h3>Tongji University | Bachelor | Automotive Engineering | 2017.09 - 2022.04</h3>
+            <ul>
+                <li>Main Courses: Automotive Engineering Fundamentals, Automotive Electronics, Drive Technology, JAVA, etc. </li>
+                <li>GPA: 4.0/5.0</li>
+                <li>Awards: National Encouragement Scholarship, Campus Excellence Award, DAAD Scholarship</li>
+                <li>Class Monitor, Youth Volunteers Association Member</li>
+            </ul>
+            <br>
+            <h3>Technische Hochschule Nürnberg Georg Simon Ohm | Bachelor | Automotive Engineering | 2020.09 - 2022.04</h3>
+            <ul>
+                <li>Main Courses: Matlab, Automotive Dynamics Control, Internal Combustion Engines</li>
+                <li>Exchange Program: Completed 6 months of coursework, 9 months internship, and Bachelor thesis in Germany</li>
+            </ul>
+        </section>
+        <br>
+        <hr>
+        <section class="skills">
+            <h2>📜 Professional Skills</h2>
+            <ul>
+                <li>German TestDaF Certificate | 17/20</li>
+                <li>IELTS Score | 6.5</li>
+                <li>Programming: Python, Matlab, R, ROS, ROS2, SolidWorks</li>
+            </ul>
+        </section>
+        <br>
+        <hr>
+        <section class="hobbies">
+            <h2>🎨 Interests</h2>
+            <p>Table Tennis, Badminton, Traveling, Music, Movies</p>
+        </section>
+        <br>
+        <!-- 其他英文模块 -->
+    </div>
 
-	<section class="education">
-		<h2>🎓 教育经历</h2>
-		<h3>慕尼黑工业大学 | 机器人、认知与人工智能 | 硕士 | 2022.04 - 2024.12 </h3>
-		<ul>
-			<li>主修课程：机器学习、深度学习、计算机视觉、机器人学、路径规划、人工智能、自动驾驶与设计等</li>
-			<li>GPA: 1.9/1.0</li>
-		</ul>
-		<br>
-		<h3>同济大学 | 汽车服务工程 | 本科 | 2017.09 - 2022.04 </h3>
-		<ul>
-			<li>主修课程：汽车工程基础、汽车电子控制、驱动技术、JAVA、机械原理、电工学、自动原理等</li>
-			<li>GPA: 4.0/5.0</li>
-			<li>奖项：国家励志奖学金、校级优秀学生、DAAD奖学金等</li>
-			<li>担任班级班长，校共青团团委志愿者工作部干事</li>
-		</ul>
-		<br>
-		<h3> 纽伦堡应用技术大学 | 汽车服务工程 | 本科 | 2020.09 - 2022.04 </h3>
-		<ul>
-			<li>主修课程：Matlab、汽车动态控制、内燃机技术等</li>
-			<li>交换学习，在德国完成了半年的课程，9个月实习，毕业设计</li>
-		</ul>
-	</section>
-	<br>
-	<hr>
-	<section class="skills">
-		<h2>📜 个人技能</h2>
-		<ul>
-			<li>德语TestDaF证书 | 17/20</li>
-			<li>英语雅思证书 | 6.5 </li>
-			<li>编程与软件：Python、Matlab、R语言、ROS、ROS2、SolidWorks</li>
-		</ul>
-	</section>
-	<br>
+	<script>
+	// 切换语言函数
+	function switchLanguage(lang) {
+		// 保存用户选择
+		localStorage.setItem('resumeLang', lang);
+		
+		// 切换显示状态
+		document.querySelectorAll('[data-lang]').forEach(element => {
+			element.style.display = element.dataset.lang === lang ? 'block' : 'none';
+		});
+		
+		// 更新按钮状态
+		document.querySelectorAll('.btn').forEach(btn => {
+			btn.classList.toggle('active', btn.dataset.lang === lang);
+		});
+	}
 
+	// 初始化语言（根据浏览器语言或本地存储）
+	const savedLang = localStorage.getItem('resumeLang') || navigator.language.startsWith('zh') ? 'zh' : 'en';
+	switchLanguage(savedLang);
+	</script>
 </body>
-
-
-
 </html>
